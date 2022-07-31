@@ -7,14 +7,13 @@ import { SignUpType } from "../../../api/auth/authDto";
 import { useAppDispatch } from "../../../core/redux/reduxType";
 import { registerThunk } from "../authThunk";
 
-// cb: () => navigate('/dashboard')
 export const SignUp: FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const onFinish = (data: SignUpType) => {
     delete data.agree;
     delete data.confirm;
-    dispatch(registerThunk({ data }));
+    dispatch(registerThunk({ data, cb: () => navigate("/dashboard") }));
   };
   return (
     <Flex>
@@ -200,9 +199,11 @@ const WrapperItem = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 24px;
+
   & > div {
     width: 100%;
   }
+
   @media ${({ theme }) => theme.media._480} {
     gap: 10px;
   }
@@ -215,10 +216,12 @@ const Flex = styled.div`
   height: 100%;
   flex-direction: column;
   padding: 24px;
+
   & > form {
     max-width: 500px;
     width: 100%;
     margin-bottom: 24px;
+
     & > button {
       width: 100%;
     }

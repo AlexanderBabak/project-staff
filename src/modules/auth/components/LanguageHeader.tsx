@@ -19,10 +19,8 @@ export const LanguageHeader = () => {
           bordered={false}
           dropdownStyle={{ minWidth: "120px" }}
         >
-          <OptionStyle value="deutsch">Deutsch</OptionStyle>
-          <Option value="english">English</Option>
           <Option value="русский">Русский</Option>
-          <Option value="italiano">Italiano</Option>
+          <Option value="english">English</Option>
         </SelectStyle>
       </Flex>
       <CloseOutlined />
@@ -34,23 +32,13 @@ const SelectStyle = styled(Select)`
   padding: 0;
   color: #1890ff;
   width: 100px;
+
   .ant-select-arrow .anticon > svg {
     fill: ${({ theme }) => theme.colors.blue};
   }
+
   @media ${({ theme }) => theme.media._480} {
     font-size: 14px;
-  }
-`;
-
-const OptionStyle = styled(Option)`
-  .ant-select-arrow .anticon > svg {
-    fill: #1890ff;
-  }
-  .ant-select-item-option-content {
-    padding-left: 30px;
-  }
-  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
-    color: #1890ff;
   }
 `;
 
@@ -61,6 +49,7 @@ const HeaderStyle = styled(Header)`
   box-shadow: 0 3px 5px 0 rgba(34, 60, 80, 0.2);
   font-size: 16px;
   line-height: 0;
+
   & > span {
     cursor: pointer;
     position: absolute;
@@ -68,9 +57,11 @@ const HeaderStyle = styled(Header)`
     right: 30px;
     color: #e8e8e8;
   }
+
   @media ${({ theme }) => theme.media._480} {
     padding: 0 16px;
     font-size: 12px;
+
     & > span {
       right: 8px;
       top: 26px;
@@ -89,6 +80,7 @@ const TextStyle = styled(Text)`
   position: relative;
   margin-left: 12px;
   padding-right: 12px;
+
   &::after {
     position: absolute;
     content: "";
