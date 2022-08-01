@@ -1,4 +1,4 @@
-import { post, get } from "../baseRequest";
+import { post, get } from "../../baseRequest";
 import { IInvoices, InvoicesFromServer } from "./invoicesDto";
 
 export const addInvoicesService = (

@@ -1,8 +1,8 @@
 import { FC, useCallback, useEffect, useState } from "react";
 import { Tabs, Button } from "antd";
 import styled from "styled-components";
-import { TableInvoices } from "../../common/components/TableInvoices";
-import { AddNewInvoices } from "../../common/components/AddNewInvoices";
+import { TableInvoices } from "./components/TableInvoices";
+import { AddNewInvoices } from "../documents/components/AddNewInvoices";
 import { useAppDispatch, useAppSelector } from "../../core/redux/reduxType";
 import { getAllInvoicesThunk } from "./documentThunk";
 

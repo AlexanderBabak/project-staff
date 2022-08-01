@@ -2,8 +2,8 @@ import { FC, useMemo } from "react";
 import { Popconfirm, Table } from "antd";
 import type { ColumnsType } from "antd/lib/table";
 import { EmployeeFromServiceType } from "../../../api/customers/customersDto";
-import { getAge } from "../../../utils/getAge";
-import { firstCharUppercase } from "../../../utils/firstCharUppercase";
+import { getAge } from "../../../core/utils/getAge";
+import { firstCharUppercase } from "../../../core/utils/firstCharUppercase";
 import { useAppDispatch } from "../../../core/redux/reduxType";
 import { deleteEmployeeThunk } from "../customersThunk";
 

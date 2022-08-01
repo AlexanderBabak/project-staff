@@ -11,6 +11,7 @@ import { Templates } from "./modules/documents/Templates";
 import { Drafts } from "./modules/documents/Drafts";
 import { Invoices } from "./modules/documents/Invoices";
 import { Customers } from "./modules/customers/Customers";
+import { Setting } from "./modules/dashboard/Setting";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="templates" element={<Templates />} />
           </Route>
           <Route path="/customers" element={<Customers />} />
+          <Route path="/settings" element={<Setting />} />
         </Route>
       </Route>
     </Routes>

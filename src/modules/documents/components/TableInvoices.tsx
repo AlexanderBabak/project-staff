@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Table } from "antd";
-import { columns } from "../hooks/invoicesTable";
-import { InvoicesFromServer } from "../../api/invoices/invoicesDto";
+import { columns } from "../../../common/hooks/invoicesTable";
+import { InvoicesFromServer } from "../../../api/documents/invoices/invoicesDto";
 
 interface IProps {
   invoices: InvoicesFromServer[];

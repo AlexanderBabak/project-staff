@@ -2,7 +2,7 @@ import { ColumnsType } from "antd/lib/table";
 import {
   InvoicesFromServer,
   invoicesType,
-} from "../../api/invoices/invoicesDto";
+} from "../../api/documents/invoices/invoicesDto";
 import moment from "moment";
 import { Tag } from "antd";
 

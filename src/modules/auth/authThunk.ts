@@ -5,6 +5,7 @@ import {
   SignUpType,
 } from "../../api/auth/authDto";
 import {
+  getByIdUser,
   searchEmailUsers,
   signUpService,
   updatePasswordUser,
@@ -55,3 +56,24 @@ export const changePasswordThunk = createAsyncThunk<
   cb();
   return user;
 });
+
+export const changeOldPasswordThunk = createAsyncThunk<
+  void,
+  { id: string; oldPassword: string; newPassword: string; cb: () => void }
+>(
+  "auth/checkOldPassword",
+  async ({ id, oldPassword, newPassword, cb }, { dispatch }) => {
+    const getId = await getByIdUser(id);
+    const user = getId[0];
+    if (!user) {
+      errorNotification("Что-то пошло не так");
+      throw new Error("Что-то пошло не так");
+    }
+    if (user.password !== oldPassword) {
+      errorNotification("Старый пароль не верен");
+      throw new Error("Старый пароль не верен");
+    }
+
+    await dispatch(changePasswordThunk({ id, password: newPassword, cb }));
+  }
+);

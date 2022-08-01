@@ -11,6 +11,18 @@
       "year": 1996,
       "sex": "man",
       "id": 1
+    },
+    {
+      "email": "bbkshow1987@gmail.com",
+      "lastname": "Бaбак",
+      "name": "Александр",
+      "patronymic": "Владимирович",
+      "password": "12345678",
+      "day": 26,
+      "month": "february",
+      "year": 1987,
+      "sex": "man",
+      "id": 2
     }
   ],
   "invoices": [
@@ -109,6 +121,14 @@
       "price": "5600₽",
       "date": "Sun May 29 2022 12:00:04 GMT+0300 (Восточная Европа, летнее время)",
       "id": 12
+    },
+    {
+      "type": "paid",
+      "title": "ТО машины",
+      "description": "Ежегодно прохожу с оплатой",
+      "price": "230₽",
+      "date": "Wed Jul 06 2022 21:31:20 GMT+0300 (Восточная Европа, летнее время)",
+      "id": 13
     }
   ],
   "seeker": [

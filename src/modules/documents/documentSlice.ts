@@ -1,6 +1,6 @@
 import { AnyAction, createSlice } from "@reduxjs/toolkit";
 import { STATUS } from "../../core/redux/reduxType";
-import { InvoicesFromServer } from "../../api/invoices/invoicesDto";
+import { InvoicesFromServer } from "../../api/documents/invoices/invoicesDto";
 import { addInvoicesThunk, getAllInvoicesThunk } from "./documentThunk";
 
 interface IInitialState {

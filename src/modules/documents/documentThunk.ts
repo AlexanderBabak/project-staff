@@ -1,11 +1,14 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import { IInvoices, InvoicesFromServer } from "../../api/invoices/invoicesDto";
+import {
+  IInvoices,
+  InvoicesFromServer,
+} from "../../api/documents/invoices/invoicesDto";
 
 import {
   addInvoicesService,
   getAllInvoicesService,
-} from "../../api/invoices/invoicesService";
+} from "../../api/documents/invoices/invoicesService";
 
 export const addInvoicesThunk = createAsyncThunk<
   InvoicesFromServer[],
