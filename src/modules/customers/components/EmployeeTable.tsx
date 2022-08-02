@@ -6,6 +6,7 @@ import { getAge } from "../../../core/utils/getAge";
 import { firstCharUppercase } from "../../../core/utils/firstCharUppercase";
 import { useAppDispatch } from "../../../core/redux/reduxType";
 import { deleteEmployeeThunk } from "../customersThunk";
+import { WrapperDisplayNone768 } from "../../../common/components/Style";
 
 interface IProps {
   employee: EmployeeFromServiceType[];
@@ -75,11 +76,13 @@ export const EmployeeTable: FC<IProps> = ({ employee }) => {
     []
   );
   return (
-    <Table
-      columns={columns}
-      dataSource={employee}
-      rowKey="id"
-      pagination={{ pageSize: 10 }}
-    />
+    <WrapperDisplayNone768>
+      <Table
+        columns={columns}
+        dataSource={employee}
+        rowKey="id"
+        pagination={{ pageSize: 10 }}
+      />
+    </WrapperDisplayNone768>
   );
 };
