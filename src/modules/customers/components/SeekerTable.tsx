@@ -2,10 +2,11 @@ import { FC, useMemo } from "react";
 import { Popconfirm, Table } from "antd";
 import type { ColumnsType } from "antd/lib/table";
 import { SeekerFromServiceType } from "../../../api/customers/customersDto";
-import { getAge } from "./../../../core/utils/getAge";
+import { getAge } from "../../../core/utils/getAge";
 import { firstCharUppercase } from "../../../core/utils/firstCharUppercase";
 import { useAppDispatch } from "../../../core/redux/reduxType";
 import { deleteSeekerThunk } from "../customersThunk";
+import { WrapperDisplayNone768 } from "../../../common/components/Style";
 
 interface IProps {
   seeker: SeekerFromServiceType[];
@@ -13,7 +14,6 @@ interface IProps {
 
 export const SeekerTable: FC<IProps> = ({ seeker }) => {
   const dispatch = useAppDispatch();
-
   const handleDelete = (id: number) => {
     dispatch(deleteSeekerThunk(id));
   };
@@ -76,11 +76,13 @@ export const SeekerTable: FC<IProps> = ({ seeker }) => {
   );
 
   return (
-    <Table
-      columns={columns}
-      dataSource={seeker}
-      rowKey="id"
-      pagination={{ pageSize: 10 }}
-    />
+    <WrapperDisplayNone768>
+      <Table
+        columns={columns}
+        dataSource={seeker}
+        rowKey="id"
+        pagination={{ pageSize: 10 }}
+      />
+    </WrapperDisplayNone768>
   );
 };
