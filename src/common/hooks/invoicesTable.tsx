@@ -6,7 +6,7 @@ import {
 import moment from "moment";
 import { Tag } from "antd";
 
-const colorsType = (type: invoicesType) => {
+export const colorsType = (type: invoicesType) => {
   switch (type) {
     case "archived":
       return "blue";
