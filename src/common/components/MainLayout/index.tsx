@@ -69,15 +69,14 @@ const LeftMenuStyle = styled.div<{ visible: boolean }>`
     position: absolute;
     right: -32px;
     top: 30px;
-    opacity: .5;
-    
+    opacity: 0.5;
   }
-}
 
-@media ${({ theme }) => theme.media._980} {
-  transition: all .3s linear;
-  left: ${({ visible }) => (visible ? "0" : "-200px")};
-  & > button {
-    display: block;
+  @media ${({ theme }) => theme.media._980} {
+    transition: all 0.3s linear;
+    left: ${({ visible }) => (visible ? "0" : "-200px")};
+    & > button {
+      display: block;
+    }
   }
 `;

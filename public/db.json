@@ -1,16 +1,16 @@
 {
   "users": [
     {
-      "email": "alex@mail.ru",
-      "lastname": "Alexeev",
+      "email": "bbkshow1987@gmail.com",
+      "lastname": "Babak",
       "name": "Alexander",
-      "patronymic": "Nongo",
-      "password": "xzxz1234",
-      "day": 25,
-      "month": "july",
-      "year": 1996,
+      "patronymic": "Vladimirovich",
+      "password": "12345678",
+      "day": 26,
+      "month": "february",
+      "year": 1987,
       "sex": "man",
-      "id": 1
+      "id": 2
     }
   ],
   "invoices": [
