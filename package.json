@@ -13,6 +13,7 @@
     "i18next": "^21.6.16",
     "i18next-browser-languagedetector": "^6.1.4",
     "i18next-http-backend": "^1.4.0",
+    "json-server": "^0.17.0",
     "moment": "^2.29.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -26,7 +27,7 @@
   },
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm start\"",
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -59,7 +60,6 @@
     "@types/react-dom": "^18.0.5",
     "@types/styled-components": "^5.1.25",
     "concurrently": "^7.3.0",
-    "json-server": "^0.17.0",
     "typescript": "^4.7.2"
   }
 }

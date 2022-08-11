@@ -1,6 +1,6 @@
 import { errorNotification } from "../common/components/Notification";
 
-export const BASE_URL = "http://localhost:3004/";
+export const BASE_URL = "https://staffpro.herokuapp.com/api/";
 
 interface IData {
   method: "POST" | "GET" | "PATCH" | "DELETE";
